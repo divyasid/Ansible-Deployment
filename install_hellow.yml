@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: copy hellow.html as index file to web server
+      template: 
+         src : "./hellow.html"
+         dest : "/var/www/html/index.html"
